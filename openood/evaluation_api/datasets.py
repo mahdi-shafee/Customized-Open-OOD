@@ -848,7 +848,7 @@ def get_id_ood_dataloader(id_name, data_root, preprocessor, **loader_kwargs):
                                             transform=large_transform)
             if out_dataset == 'celebA_ood':
                 subset = torch.utils.data.Subset(testsetout, np.random.choice(len(testsetout), 2000, replace=True))
-                testloaderOut =  
+                testloaderOut = None 
                 num_samples = len(subset)
                 val_size = int(0.2 * num_samples)  
 
